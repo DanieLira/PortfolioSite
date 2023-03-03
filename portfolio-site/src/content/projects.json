@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "imgUrl":"src\\content\\ejemplo-proyecto.png",
+        "title":"Quizzical",
+        "description":"Este proyecto es un quiz que hice cuando recien estaba aprendiendo react xd Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, sunt.",
+        "tecnologies":[
+            "react",
+            "tailwind",
+            "csharp"
+        ]
+    },
+    {
+        "id":2,
+        "imgUrl":"src\\content\\ejemplo-proyecto.png",
+        "title":"Optician Manager",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos a ut qui voluptates voluptas iure.",
+        "tecnologies":[
+            "react",
+            "tailwind",
+            "csharp"
+        ]
+    },
+    {
+        "id":3,
+        "imgUrl":"src\\content\\ejemplo-proyecto.png",
+        "title":"Excercise Tracker",
+        "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam quod natus, voluptatem, illo saepe officia ut maxime molestias obcaecati vitae sequi provident quae?",
+        "tecnologies":[
+            "react",
+            "tailwind",
+            "csharp"
+        ]
+    },
+    {
+        "id":4,
+        "imgUrl":"src\\content\\ejemplo-proyecto.png",
+        "title":"Time Tracking Dashboard",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio atque facere eos?",
+        "tecnologies":[
+            "react",
+            "tailwind",
+            "csharp"
+        ]
+    }
+]
