@@ -1,29 +1,27 @@
 import React from "react"
-import {AiOutlineArrowLeft} from "react-icons/ai"
+import { AiOutlineArrowLeft } from "react-icons/ai"
 
 export default function Home() {
     return (
-        <div id="home" className="relative flex justify-between items-center py-[30vh]">
+        <div id="home" className="relative pl-5 md:pl-0 w-[90vw] h-[100vh] flex justify-between items-center py-[10vh]">
             <div>
-                <h1 className="text-8xl text-slate-100">
+                <h1 className="text-4xl md:text-6xl text-slate-100">
+                    <span className="text-lime-600">&lt;h1&gt;</span>
                     Hi,<br />
                     I'm Daniel,<br />
-                    Full Stack developer
+                    <strong>Full Stack Developer</strong>
+                    <span className="text-lime-600">&lt;/h1&gt;</span>
                 </h1>
                 <button
                     type="button"
-                    onClick={()=>location.href='#contact'}
-                    className="border-4 text-slate-100 border-lime-600 py-4 px-14 mt-10 hover:bg-lime-600 duration-[600ms]">
+                    onClick={() => location.href = '#contact'}
+                    className="font-bold border-4 md:font-thin text-slate-100 border-lime-600 py-4 px-14 mt-10 hover:bg-lime-600 duration-[600ms]">
                     Contact me!
                 </button>
             </div>
-            <img
-                src="src\content\foto-mia.jpg"
-                alt="A handsome guy posing"
-                className="w-[300px] h-[300px] object-cover rounded-full mr-36"
-            />
+            {/* <object data="src\content\developer.svg" className="hidden md:w-[700px]"></object> */}
             <div className="absolute bottom-20 right-10 animate-bounce w-10 h-10">
-                <p className="flex items-center  text-slate-100  -rotate-90 w-[150px] justify-between font-bold"><AiOutlineArrowLeft/>Scroll down! </p>
+                <p className="flex items-center  text-slate-100  -rotate-90 w-[150px] justify-between font-bold"><AiOutlineArrowLeft />Scroll down! </p>
             </div>
         </div>
     )
