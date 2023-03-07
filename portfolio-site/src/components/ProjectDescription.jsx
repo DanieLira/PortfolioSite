@@ -26,7 +26,7 @@ export default function ProjectDescription(props) {
     return (
         <>
             
-            <div className="flex-col items-end md:absolute md:right-0 w-[90vw] h-[300px] md:w-[450px] md:h-[280px] drop-shadow-2xl p-4 flex   bg-[#181818] z-10 text-slate-100 md:opacity-90 mt-10 md:mt-0">
+            <div className="flex flex-col items-end 2xl:absolute md:right-0 w-[90vw] h-[300px] md:w-[450px] md:h-[280px] drop-shadow-2xl p-4 bg-[#181818] z-10 text-slate-100 md:opacity-90 mt-10 md:mt-0">
                 <h3 className="text-2xl mb-2 font-bold">{props.data.title}</h3>
                 <p className="text-right">{props.data.description}</p>
                 <div className="absolute bottom-3 left-1 w-full flex flex-col p-2">
@@ -36,7 +36,7 @@ export default function ProjectDescription(props) {
                     </ul>
                 </div>
             </div>
-            <img src={props.data.imgUrl} className="w-[90%] md:w-[80%] rounded-md mt-10 md:mt-0" />
+            <img src={props.data.imgUrl} className="w-[90%] md:w-[100%] 2xl:w-[90%] md:mt-10 rounded-md mt-10 2xl:mt-0" />
         </>
     )
 }

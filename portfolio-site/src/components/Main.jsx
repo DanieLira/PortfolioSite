@@ -7,7 +7,7 @@ import About from "./About"
 
 export default function Main() {
     return (
-        <div className="md:ml-[180px] md:px-20 bg-[#1d1d1d] overflow-x-hidden">
+        <div className="md:ml-[180px] xl:px-10 2xl:px-20 bg-[#1d1d1d] overflow-x-hidden">
             <Home/>
             <About/>
             <Skills/>

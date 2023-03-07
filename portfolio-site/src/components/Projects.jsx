@@ -19,9 +19,10 @@ export default function Projects() {
         />
     })
 
-    const projectNames = data.map(elem => {
+    const projectNames = data.map((elem, index) => {
         return (
             <p
+                key={index}
                 onClick={() => setCurrentProjectId(elem.id)}
                 className="flex items-center justify-between cursor-pointer text-2xl my-5 border-b-2 border-lime-600 p-2 hover:bg-lime-600 duration-[600ms]">
                 {elem.title}
@@ -33,11 +34,11 @@ export default function Projects() {
     })
 
     return (
-        <div id="projects" className="w-full md:h-[100vh] flex flex-col md:flex-row justify-between my-20 md:my-[5vh]">
-            <div className="hidden md:flex relative w-[58%] items-center">
+        <div id="projects" className="w-full md:h-[100vh] flex flex-col md:flex-row justify-between my-5 md:my-[5vh]">
+            <div className="hidden md:flex md:flex-col 2xl:flex-row relative w-[58%] items-center md:justify-center">
                 {currentProject}
             </div>
-            <div className="md:hidden flex flex-col items-center h-full mt-36">
+            <div className="md:hidden flex flex-col items-center h-full mt-36 md:items-center">
                 <h1 className="text-lime-600 text-4xl font-bold">Projects</h1>
                 {allProjects}
             </div>
