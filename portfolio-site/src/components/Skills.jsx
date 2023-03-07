@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Skills() {
     return (
-        <div id="skills" className="w-full h-[100vh] py-2 flex flex-col md:flex-row items-center justify-between">
+        <div id="skills" className="w-full md:h-[100vh] py-2 flex flex-col md:flex-row items-center justify-between">
             <div className="w-[90vw] md:w-[48%]">
                 <h2 className="text-lime-600 text-5xl font-bold mb-10">Skills and Experience</h2>
                 <p className="text-slate-100 text-justify">
