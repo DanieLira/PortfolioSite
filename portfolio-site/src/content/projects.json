@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "imgUrl":"src\\content\\quizz.gif",
+        "imgUrl":"../src/content/quizz.gif",
         "title":"Quizzical",
         "gitUrl":"https://github.com/DanieLira/Quizz",
         "description":" It is a quiz application that consumes the Open Trivia Database API. Quizzical is one of the first projects I developed in React.",
@@ -13,7 +13,7 @@
     },
     {
         "id":2,
-        "imgUrl":"src\\content\\optician.gif",
+        "imgUrl":"..src/content/optician.gif",
         "title":"Optician Manager",
         "gitUrl":"https://github.com/DanieLira/OpticianManager",
         "description":"This is a CRUD application developed for an optician. This helps the user to easily manage all their patients information.",

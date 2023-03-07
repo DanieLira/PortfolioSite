@@ -6,7 +6,7 @@ export default function About() {
             <div className="w-[90%] md:w-[48%] flex items-center justify-center">
                 <div className="w-[300px] h-[300px] 2xl:w-[500px] 2xl:h-[500px] object-cover rounded-full relative bg-lime-600">
                     <img
-                        src="src\content\foto-mia.png"
+                        src="../src/content/foto-mia.png"
                         alt="A handsome guy posing"
                         className="w-full h-full object-cover rounded-full relative right-6 bottom-6"
                     />
