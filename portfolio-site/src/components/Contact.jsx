@@ -8,8 +8,26 @@ export default function Contact() {
         navigator.clipboard.writeText("danielira996@gmail.com");
         alert("Email copied to clipboard!")
     }
-    //TODO: ADD FORM FUNCTIONALITY
-    
+        
+    const handleSubmit = (event) => {
+        event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => console.log("Form successfully submitted"))
+          .catch((error) => alert(error));
+      };
+      
+      document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+
     return (
         <div id="contact" className="w-full 2xl:h-[100vh] flex flex-col items-center 2xl:flex-row 2xl:justify-between 2xl:py-[30vh] ">
             <div className="w-[90%] 2xl:w-[45%] flex flex-col justify-center items-center">
