@@ -4,6 +4,13 @@ import { MdEmail } from "react-icons/md"
 
 export default function Contact() {
     
+    const [formData, setFormData] = React.useState({
+        "name":"",
+        "message":"",
+        "subject":"",
+        "email":""
+    })
+
     function copyEmailToClipboard() {
         navigator.clipboard.writeText("danielira996@gmail.com");
         alert("Email copied to clipboard!")
@@ -11,22 +18,26 @@ export default function Contact() {
         
     const handleSubmit = (event) => {
         event.preventDefault();
-      
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-        
+                
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => console.log("Form successfully submitted"))
+          .then(() => console.log("Message sent!"))
           .catch((error) => alert(error));
       };
       
-      document
-        .querySelector("form")
-        .addEventListener("submit", handleSubmit);
+    const handleChange = (event) => {
+        const {name, value} = event.target
+        console.log(name)
+        setFormData(prevData => {
+            return{
+                ...prevData,
+                [name]:value
+            }
+        })
+    }
 
     return (
         <div id="contact" className="w-full 2xl:h-[100vh] flex flex-col items-center 2xl:flex-row 2xl:justify-between 2xl:py-[30vh] ">
@@ -51,12 +62,12 @@ export default function Contact() {
                 <p className="text-slate-100 my-3">I'm interested in any kind of opportunities. :)</p>
                 <form action="" className="flex flex-col" data-netlify="true">
                     <div className="flex flex-col 2xl:flex-row justify-between w-full my-5">
-                        <input type="text" placeholder="Name" className="mb-10 2xl:mb-0 2xl:w-[48%] h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
-                        <input type="text" placeholder="Your Email" className="2xl:w-[48%] h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
+                        <input type="text" onChange={handleChange} name="name" value={formData.name} placeholder="Name" className="mb-10 2xl:mb-0 2xl:w-[48%] h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
+                        <input type="text" onChange={handleChange} name="email" value={formData.email} placeholder="Your Email" className="2xl:w-[48%] h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
                     </div>
-                    <input type="text" placeholder="Subject" className="my-5 h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
-                    <textarea type="text" placeholder="Message" className="my-5 h-40 p-3 bg-[#2b2b2b] text-slate-100"></textarea>
-                    <input type="submit" value="Send Message!" className="border-2 self-end my-5 border-lime-600 text-slate-100 font-bold w-48 h-12 hover:bg-lime-600 duration-[600ms]"></input>
+                    <input type="text" onChange={handleChange} name="subject" value={formData.subject} placeholder="Subject" className="my-5 h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
+                    <textarea type="text" onChange={handleChange} name="message" value={formData.message} placeholder="Message" className="my-5 h-40 p-3 bg-[#2b2b2b] text-slate-100"></textarea>
+                    <input type="submit" onClick={handleSubmit} value="Send Message!" className="border-2 self-end my-5 border-lime-600 text-slate-100 font-bold w-48 h-12 hover:bg-lime-600 duration-[600ms]"></input>
                 </form>
             </div>
         </div>
