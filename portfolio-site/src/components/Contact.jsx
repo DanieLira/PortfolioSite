@@ -11,6 +11,12 @@ export default function Contact() {
         "email":""
     })
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
+
     function copyEmailToClipboard() {
         navigator.clipboard.writeText("danielira996@gmail.com");
         alert("Email copied to clipboard!")
