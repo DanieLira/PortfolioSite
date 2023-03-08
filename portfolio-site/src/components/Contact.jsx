@@ -30,7 +30,7 @@ export default function Contact() {
       
     const handleChange = (event) => {
         const {name, value} = event.target
-        console.log(name)
+        
         setFormData(prevData => {
             return{
                 ...prevData,
