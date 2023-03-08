@@ -18,7 +18,7 @@ export default function Contact() {
         
     const handleSubmit = (event) => {
         event.preventDefault();
-        const _body = `"form-name": "contact", ${new URLSearchParams(formData).toString()}`
+        const _body = `form-name=contact&, ${new URLSearchParams(formData).toString()}`
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
