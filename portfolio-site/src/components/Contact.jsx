@@ -11,12 +11,6 @@ export default function Contact() {
         "email":""
     })
 
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-      }
-
     function copyEmailToClipboard() {
         navigator.clipboard.writeText("danielira996@gmail.com");
         alert("Email copied to clipboard!")
@@ -28,7 +22,7 @@ export default function Contact() {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData)
+          body: new URLSearchParams(formData).toString(),
         })
           .then(() => alert("Message sent!"))
           .catch((error) => alert(error));
