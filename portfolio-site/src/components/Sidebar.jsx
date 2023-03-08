@@ -9,7 +9,7 @@ export default function Sidebar() {
             <div className="bg-[#000000] h-[200px] w-full flex items-center justify-center">
                 <a href="#home">
                     <img
-                        src="../src/content/logotipo.png"
+                        src="/src/content/logotipo.png"
                         alt="A handsome guy posing"
                         className="w-[150px] h-[150px] object-cover rounded-full"
                     />
