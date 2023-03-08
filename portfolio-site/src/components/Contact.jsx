@@ -28,9 +28,9 @@ export default function Contact() {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({"form-name":"contact"}, formData),
+          body: new URLSearchParams(formData)
         })
-          .then(() => console.log("Message sent!"))
+          .then(() => alert("Message sent!"))
           .catch((error) => alert(error));
       };
       
