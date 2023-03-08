@@ -31,7 +31,7 @@ export default function Contact() {
             <div className="w-[90%] 2xl:w-[48%] mt-10 2xl:mt-0 flex flex-col justify-center">
                 <h2 className="text-lime-600 text-5xl font-bold my-3">Contact</h2>
                 <p className="text-slate-100 my-3">I'm interested in any kind of opportunities. :)</p>
-                <form action="" className="flex flex-col">
+                <form action="" className="flex flex-col" data-netlify="true">
                     <div className="flex flex-col 2xl:flex-row justify-between w-full my-5">
                         <input type="text" placeholder="Name" className="mb-10 2xl:mb-0 2xl:w-[48%] h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
                         <input type="text" placeholder="Your Email" className="2xl:w-[48%] h-10 p-3 bg-[#2b2b2b] text-slate-100"></input>
