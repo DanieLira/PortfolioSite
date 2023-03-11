@@ -19,7 +19,6 @@ export default function Home() {
                     Contact me!
                 </button>
             </div>
-            {/* <object data="src\content\developer.svg" className="hidden 2xl:w-[700px]"></object> */}
             <div className="absolute bottom-20 -left-10 animate-bounce w-10 h-10">
                 <p className="flex items-center  text-slate-100  -rotate-90 w-[150px] justify-between font-bold"><AiOutlineArrowLeft />Scroll down! </p>
             </div>

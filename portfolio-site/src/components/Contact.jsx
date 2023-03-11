@@ -1,6 +1,6 @@
 import React from "react"
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
-import { MdEmail } from "react-icons/md"
+import ContactInfo from "./ContactInfo";
+
 
 export default function Contact() {
     
@@ -10,11 +10,6 @@ export default function Contact() {
         "subject":"",
         "email":""
     })
-
-    function copyEmailToClipboard() {
-        navigator.clipboard.writeText("danielira996@gmail.com");
-        alert("Email copied to clipboard!")
-    }
         
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -41,22 +36,7 @@ export default function Contact() {
 
     return (
         <div id="contact" className="w-full 2xl:h-[100vh] flex flex-col items-center 2xl:flex-row 2xl:justify-between 2xl:py-[30vh] ">
-            <div className="w-[90%] 2xl:w-[45%] flex flex-col justify-center items-center">
-                <div className="border-dashed border-2 border-lime-600 2xl:p-10 w-full flex justify-around 2xl:flex-col">
-                    <div className="2xl:flex 2xl:items-center 2xl:w-full justify-start my-5">
-                        <MdEmail onClick={copyEmailToClipboard} className="text-5xl 2xl:text-6xl text-slate-100 2xl:mr-4" />
-                        <h3 className="hidden 2xl:block text-2xl 2xl:text-3xl text-slate-100">danielira996@gmail.com</h3>
-                    </div>
-                    <div className="2xl:flex 2xl:items-center 2xl:w-full justify-start my-5">
-                        <a href="https://linkedin.com/in/daniel-lira-733039151"><AiFillLinkedin className="text-5xl 2xl:text-6xl text-slate-100 2xl:mr-4" /></a>
-                        <h3 className="hidden 2xl:block text-2xl 2xl:text-3xl text-slate-100">linkedin.com/in/daniel-lira-733039151</h3>
-                    </div>
-                    <div className="2xl:flex 2xl:items-center 2xl:w-full justify-start my-5">
-                        <a href="https://github.com/DanieLira"><AiFillGithub className="text-5xl 2xl:text-6xl text-slate-100 2xl:mr-4" /></a>
-                        <h3 className="hidden 2xl:block 2xl:text-3xl text-slate-100">github.com/DanieLira</h3>
-                    </div>
-                </div>
-            </div>
+            <ContactInfo />
             <div className="w-[90%] 2xl:w-[48%] mt-10 2xl:mt-0 flex flex-col justify-center">
                 <h2 className="text-lime-600 text-5xl font-bold my-3">Contact</h2>
                 <p className="text-slate-100 my-3">I'm interested in any kind of opportunities. :)</p>
