@@ -26,7 +26,7 @@
     },
     {
         "id":3,
-        "imgUrl":"/src/content/tracker.gif",
+        "imgUrl":"https://raw.githubusercontent.com/DanieLira/PortfolioSite/master/portfolio-site/src/content/tracker.gif",
         "title":"Time Tracker",
         "gitUrl":"https://github.com/DanieLira/time-tracking-dashboard",
         "description":"Time tracker is a useful tool to check how much time has been invested in different activities. The data is being read from a json file, but it could easily be linked to an API.",
