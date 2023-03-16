@@ -9,7 +9,7 @@ export default function Home() {
                     <span className="text-lime-600">&lt;h1&gt;</span>
                     Hi,<br />
                     I'm Daniel,<br />
-                    <strong>Full Stack Developer</strong>
+                    <strong>Web Developer</strong>
                     <span className="text-lime-600">&lt;/h1&gt;</span>
                 </h1>
                 <button
